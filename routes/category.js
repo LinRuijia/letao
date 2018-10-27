@@ -11,6 +11,7 @@ var express = require('express'),
 function checkRootLogin(req, res, next) {
     if (!req.session.employee) {
         return res.send({ "error": 400, "message": "未登录！" });
+		
     }
     next();
 }
