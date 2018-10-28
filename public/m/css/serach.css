@@ -1,0 +1,26 @@
+.lt_header {
+	background: #f6f6f6;
+	border-bottom: 1px solid #eee;
+}
+.lt_header a:first-child {
+	color: #aaa;
+}
+.lt_header form{
+	width: 100%;
+	padding: 0 50px;
+}
+.lt_header form input {
+	width: 100%;
+	height: 30px;
+	margin-top: 7px;
+	border: 0;
+	border-radius: 15px;
+	padding-left: 10px;
+	font-size: 14px;
+	color: #aaa;
+}
+.lt_header a:last-child {
+	color: #aaa;
+	font-size: 16px;
+	border-left: 1px dashed #eee;
+}
