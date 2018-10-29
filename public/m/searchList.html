@@ -26,13 +26,16 @@
             <a  id="serach" href="javascript:;" style=""><span class="fa ">搜索</span></a>
         </header>
         <nav class="lt_order">
-            <a href="">上架时间 <span class="fa fa-angle-down"></span></a>
-            <a href="" class="select">价格 <span class="fa fa-angle-down"></a>
-            <a href="">销量 <span class="fa fa-angle-down"></a>
-            <a href="">优惠 <span class="fa fa-angle-down"></a>
+            <a href="javascript:;" data-order="time">上架时间 <span class="fa fa-angle-up"></span></a>
+            <a href="javascript:;" data-order="price">价格 <span class="fa fa-angle-up"></a>
+            <a href="javascript:;" data-order="num">销量 <span class="fa fa-angle-up"></a>
+            <a href="javascript:;" data-order="less">优惠 <span class="fa fa-angle-up"></a>
         </nav>
+        <div class="test">
+            <a href=""><img src="imges/wwjkm.gif"></a>
+        </div>
         <div class="lt_wp">
-            <div class="mui-scroll-wrapper">
+            <div class="mui-scroll-wrapper" id="refresh">
                 <div class="lt_pdt mui-clearfix">
                    
                     
@@ -44,12 +47,16 @@
 	</div>
 <script type="text/x-arttemplate" id="list">
 <%for(var i = 0;i<data.length;i++){%>
-    <a class="product_box" href="#">
+    <a  href="product.html?productId=<%=data[i].pic[0].productId%>" class="product_box">
         <img src="<%=data[i].pic[0].picAddr%>">
         <p class="mui-ellipsis-2"><%=data[i].proName%></p>
         <p>
             <span class="newprice">&yen;<%=data[i].price%> </span>
             <span class="oldprice"> &yen;<%=data[i].oldPrice%></span>
+        </p>
+        <p class="num">
+            <span>销量:</span>
+            <span><%=data[i].num%></span>
         </p>
     </a>
     <%}%>
