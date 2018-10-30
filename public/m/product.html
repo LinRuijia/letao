@@ -42,7 +42,7 @@
       </div>
       <footer class="lt_footer">
             <span class="cart fa fa-shopping-cart"></span>
-            <a href="" class="add_cart">添加到购物车</a>
+            <a href="javascript:;" class="add_cart">添加到购物车</a>
             <a href="" class="buy_now">立即购买</a>
         </footer>
         <script type="text/x-arttemplate" id="proudcts">
@@ -61,8 +61,10 @@
                                   <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img           src="<%=pic[0].picAddr%>" /></a></div>
                           </div>
                           <div class="mui-slider-indicator">
-                              <div class="mui-indicator mui-active"></div>
-                              <div class="mui-indicator "></div>                    
+                              <%for(var i = 0;i<pic.length;i++){%>
+                              <div class="mui-indicator <%=i==0?"mui-active":""%>"></div>
+                             <%}%> 
+                                              
                           </div>
                        </div>
                        <div class="productname">
@@ -76,10 +78,15 @@
                         <%var sizes = size.split("-");
                         for(var i = sizes[0];i<=sizes[1];i++){
                         %>
-                        <span class="btn_size"><%=i%></span>
+                        <span class="btn_size "><%=i%></span>
                         <%}%>
-
+                        
                        </div>
+                       <div class="p_number">
+                            数量：
+                            <span class="jian">-</span><input readonly type="text" value="0" data-max="<%=num%>" /><span class="jia">+</span>
+                              剩余：<%=num%> 件
+                        </div>
         </script>
 <script src="assets/mui/js/mui.min.js"></script>
 <script src="assets/artTemplate/template-native.js"></script>

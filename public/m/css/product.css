@@ -35,6 +35,7 @@ html {
     width: 100%;
     padding: 8px 8px;
     color: #888;
+    text-align: center;
     border-bottom: 1px dashed #ccc;
 }
 .btn_size {
@@ -42,10 +43,43 @@ html {
     font-size: 18px;
     width: 30px;
     height: 30px;
-    border: 1px solid #555;
+    border: 1px solid #eee;
     margin: 5px 5px;
-}
 
+}
+.size_select {
+    background: skyblue;
+    color: #fff;
+}
+.p_number{
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.p_number .jian,.p_number .jia{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+.p_number input{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
 .lt_footer {
     height: 49px;
     width:100%;
